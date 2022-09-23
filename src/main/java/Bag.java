@@ -128,7 +128,7 @@ public abstract class Bag {
     /**
      * Return the details of this Bag.
      * This method requires you to have created the private
-     * instance variables mentioned above.
+     * instance variables mentioned above.s
      *
      * @return
      */

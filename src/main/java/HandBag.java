@@ -24,7 +24,7 @@ public class HandBag extends Bag{
     }
 
     /**
-     * Increase the capacity of this bag by 1.
+     * Increase the capacity of this bag by 1.s
      */
     @Override
     public void enhance() {
