@@ -30,6 +30,8 @@ public abstract class Bag {
     public Bag(String color, int capacity) {
         this.capacity = capacity;
         this.color = color;
+        this.numberOfContents = 0;
+        this.contents = new String[capacity];
     }
 
 
@@ -48,7 +50,7 @@ public abstract class Bag {
     }
 
     public int getNumberOfContents() {
-        return this.contents.length;
+        return this.numberOfContents;
     }
 
     public int getCapacity()    {
@@ -82,6 +84,7 @@ public abstract class Bag {
             return false;
         }   else    {
             this.contents[items - 1] = item;
+            this.numberOfContents += 1;
             return true;
         }
     }
@@ -104,6 +107,7 @@ public abstract class Bag {
         }   else    {
             String lastItem = this.contents[items - 1];
             this.contents[items - 1] = null;
+            this.numberOfContents -= 1;
             return lastItem;
         }
     }
@@ -122,13 +126,14 @@ public abstract class Bag {
             newContents[i] = this.contents[i];
         }
         this.contents = newContents;
+        this.capacity += n;
 
     }
 
     /**
      * Return the details of this Bag.
      * This method requires you to have created the private
-     * instance variables mentioned above.s
+     * instance variables mentioned above.
      *
      * @return
      */
