@@ -83,7 +83,7 @@ public abstract class Bag {
         if (items == this.capacity) {
             return false;
         }   else    {
-            this.contents[items - 1] = item;
+            this.contents[items] = item;
             this.numberOfContents += 1;
             return true;
         }
